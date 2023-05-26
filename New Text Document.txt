@@ -1,0 +1,71 @@
+document.addEventListener("DOMContentLoaded", function() {
+  // Auto-scroll interval in milliseconds
+  var autoScrollInterval = 3000;
+
+  // Get the carousel element
+  var carousel = document.querySelector(".carousel");
+
+  // Set the initial slide index
+  var slideIndex = 0;
+
+  // Function to move to the next slide
+  function nextSlide() {
+    slideIndex++;
+    showSlide();
+  }
+
+  // Function to show the current slide
+  function showSlide() {
+    var slides = carousel.querySelectorAll(".carousel-item");
+    var controls = carousel.querySelectorAll(".carousel-control");
+
+    // Reset the active class for slides and controls
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active");
+      controls[i].classList.remove("active");
+    }
+
+    // Wrap around to the first slide if the last slide is reached
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+
+    // Set the active class for the current slide and control
+    slides[slideIndex].classList.add("active");
+    controls[slideIndex].classList.add("active");
+  }
+
+  // Set the initial slide
+  showSlide();
+
+  // Start auto-scrolling
+  var autoScroll = setInterval(nextSlide, autoScrollInterval);
+
+  // Pause auto-scrolling on mouseover
+  carousel.addEventListener("mouseover", function() {
+    clearInterval(autoScroll);
+  });
+
+  // Resume auto-scrolling on mouseout
+  carousel.addEventListener("mouseout", function() {
+    autoScroll = setInterval(nextSlide, autoScrollInterval);
+  });
+
+  // Handle previous slide control click
+  carousel.querySelector(".prev").addEventListener("click", function(event) {
+    event.preventDefault();
+    slideIndex--;
+    showSlide();
+    clearInterval(autoScroll);
+    autoScroll = setInterval(nextSlide, autoScrollInterval);
+  });
+
+  // Handle next slide control click
+  carousel.querySelector(".next").addEventListener("click", function(event) {
+    event.preventDefault();
+    slideIndex++;
+    showSlide();
+    clearInterval(autoScroll);
+    autoScroll = setInterval(nextSlide, autoScrollInterval);
+  });
+});
