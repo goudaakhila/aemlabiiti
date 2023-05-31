@@ -331,6 +331,16 @@ footer {
 .news-heading {
   margin-bottom: 10px;
   padding: 10px;
+	
+padding: 10px;
+
+  background-color: #2E2252;
+
+  color:#FFFFFF; 
+
+  font-family: "Times New Roman", Times, serif;
+
+  text-align:center;
   background-color: #f5f5f5;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
