@@ -5,19 +5,36 @@
   box-sizing: border-box;
   width:auto;
 }
-/* Styles for mobile devices */
-@media screen and (max-width: 767px) {
-  /* CSS rules for mobile screens */
-}
 
-/* Styles for tablets */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  /* CSS rules for tablet screens */
+.carousel-container {
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* Styles for desktop screens */
-@media screen and (min-width: 1024px) {
-  /* CSS rules for desktop screens */
+
+.boxes-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color:#FFFFFF;
+}
+
+.box-carousel {
+  width: calc(50% - 20px);
+  height: relative;
+  text-align: center;
+  margin: 10px;
+  margin-top: 0px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.box-carousel h4,
+.box-carousel p {
+  margin-top: 10px;
+  text-align: center;
+  color: rgba(34, 110, 147, 1);
 }
 
 
@@ -25,6 +42,8 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
+  width:100%;
+  
 }
 
 .container {
@@ -32,6 +51,7 @@ body {
   margin: 0 auto;
   padding: 10px;
   margin-top: 0;
+  width:90%;
   
 }
 p{
@@ -89,50 +109,51 @@ ul {
     box-shadow: 0 0 5px #fff;
   }
   50% {
-    opacity: 1;
+    : 1;
     box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff;
   }
   100% {
     opacity: 0;
-    box-shadow: 0 0 5px #fff;
+    box-opacityshadow: 0 0 5px #fff;
   }
 }
 
 /*Research images*/
+/* Research images */
 .boxes {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .box {
-  width: 30%;
-  height: relative;
-  text-align: left;
+  width: 33.3%%;
   text-align: center;
   margin: 10px;
   padding: 10px;
   background-color: #FFFFFF;
   box-sizing: border-box;
-  
 }
 
 .box img {
-  width: 270px;
+  width: 100%;
   height: auto;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
 .box h4,
 .box p {
   margin: 0;
-  text-align: center;
-  color: rgba(34,110,147,1);
+  color: rgba(34, 110, 147, 1);
+  text-align:center;
 
 }
 
 .center-heading {
   text-align: center;
-  margin-top:0px;
+  margin-top: 0px;
 }
+
 
 
 /* Header styles */
@@ -148,14 +169,21 @@ header img {
   height: 100%;
   object-fit: cover;
   padding:20px;
-}
-.nav-links {
+}.nav-links {
   display: flex;
   list-style: none;
 }
 
+.logo img{
+position:absolute;
+width:auto;
+height:100px;
+}
+
+
 .nav-links li {
   margin-right: 10px;
+  
 }
 
 .nav-links a {
@@ -190,6 +218,7 @@ header img {
     top: 100%;
     left: 0;
     right: 0;
+    z-index: 1; /* Add this line to ensure the navbar is visible */
   }
 }
 
@@ -233,19 +262,22 @@ nav ul li a:hover:before {
 }
 
 
+
+/* footer styles */
 /* footer styles */
 footer {
   background-color: #f2f2f2;
   padding: 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
 }
 
 .footer-info,
 .footer-links,
 .footer-social {
-  margin-right: 30px;
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
 }
 
 .footer-info h3,
@@ -270,13 +302,14 @@ footer {
 .footer-links ul li,
 .footer-social ul li {
   list-style: none;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
 
 .footer-links ul li a,
 .footer-social ul li a {
   text-decoration: none;
   color: #555;
+  display: flex;
   align-items: center;
 }
 
@@ -284,25 +317,33 @@ footer {
   font-size: 20px;
   margin-right: 10px;
   color: #555;
-  align-items: center;
 }
+
 .footer-social ul li img {
-  width: 32px; /* Adjust the width as needed */
-  height: 32px; /* Adjust the height as needed */
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  margin-right: 8px;
+  border: 1px solid gray;
+  border-radius: 50%;
 }
+
 .social-icon {
-  width: 32px; /* Adjust the width as needed */
-  height: 32px; /* Adjust the height as needed */
-  background-color: #f5f5f5; /* Adjust the background color as needed */
+  width: 32px;
+  height: 32px;
+  background-color: #f5f5f5;
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 8px; /* Adjust the spacing between icons */
-  border-color:gray;
+  margin-right: 8px;
+  border-color: gray;
 }
+
+
 
 /* News styles */
 .news-box {
-  max-width: 1200px;
+  max-width: 90%;
   height: 200px;
   overflow: hidden;
   border: 1px solid #ccc;
@@ -328,37 +369,42 @@ footer {
   margin-bottom:10px;
 
 }
-.news-heading {
-  margin-bottom: 10px;
+.news-heading {  
+margin-bottom: 10px;
   padding: 10px;
-	
-padding: 10px;
-
   background-color: #2E2252;
-
   color:#FFFFFF; 
-
   font-family: "Times New Roman", Times, serif;
-
   text-align:center;
-  
-
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
+  max-width: auto;
   margin: 0 auto;
-  margin-top: 0;
-  margin-bottom:20px;
+  margin-top: 20px;
+  margin-bottom:10px;
 }
 
 .headline-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
   margin: 0 auto;
-  animation: scroll 10s infinite linear;
+  animation: scroll 25s infinite linear;
+  overflow: hidden; /* Add this line to hide the overflow */
 }
+
+.headline-list:hover {
+  animation-play-state: paused; /* Add this line to pause the animation on hover */
+}
+.headline-list:hover li {
+  color: red; /* Add this line to highlight the text color */
+}
+.headline-list:hover li a {
+  color: blue; /* Add this line to change the link color on hover */
+}
+
 
 .headline {
   line-height: 30px;
@@ -437,6 +483,7 @@ padding: 10px;
 
 .carousel{
 	margin-top:20px;
+	
 }
 
 /* Bibilography */
