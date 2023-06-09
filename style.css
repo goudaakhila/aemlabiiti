@@ -511,27 +511,26 @@ font-family: "Times New Roman", Times, serif;
 /* Head member section */
 /* Adjust the CSS as per your requirements */
 .member {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-			margin-top:20px;
-			border-radius:30px;
-			justify-content:space-between;
-			
-        }
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	margin-top:20px;
+	border-radius:30px;
+	justify-content:space-between;			
+ }
         
-        .member-photo {
-		  flex-grow: 1;
-		  width: 30%;
-		  position: relative;
-		  align-self: flex-start;
-		  padding: 20px;
-		  margin-right:20px;
-		  background-color: white;
-		  border-radius: 10px;
-		  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-		  transition: transform 0.3s ease; /* Adjust the perspective value as needed */
-		}
+.member-photo {
+ flex-grow: 1;
+ width: 30%;
+position: relative;
+align-self: flex-start;
+padding: 20px;
+margin-right:20px;
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+transition: transform 0.3s ease; /* Adjust the perspective value as needed */
+}
         
         .member-photo img {
             width: 100%;
@@ -627,13 +626,13 @@ font-family: "Times New Roman", Times, serif;
 		  }
 		}
         .header-logo {
-            display: flex;
-            align-items: center;
-            background-color: white;
-			color:#27285C;
-			align-items: center;
-			justify-content: center;
-			text-align:center;
+        display: flex;
+        align-items: center;
+        background-color: white;
+	color:#27285C;
+	align-items: center;
+	justify-content: center;
+	text-align:center;
         }
         
         .header-img {
@@ -650,16 +649,16 @@ font-family: "Times New Roman", Times, serif;
         }
         
         .header-title {
-            flex-grow: 1;
-            width: 100%;
-            height: auto;
-            position: relative;
-			align-items: center;
-			justify-content: center;
+        flex-grow: 1;
+        width: 100%;
+        height: auto;
+        position: relative;
+	align-items: center;
+	justify-content: center;
         }
-		.name {
-            font-size: 34px; /* Default font size */
-			color: #27285C;
+	.name {
+         font-size: 34px; /* Default font size */
+	color: #27285C;
         }
 
         @media (max-width: 768px) {
@@ -681,7 +680,7 @@ font-family: "Times New Roman", Times, serif;
             .name {
                 font-size: 18px;
             }
-			.header-img {
+	.header-img {
             flex-grow: 1;
             width: 60%;
             position: relative;
