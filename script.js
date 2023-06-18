@@ -1,4 +1,9 @@
-// Toggle the active class on the navbar when hamburger is clicked
-document.querySelector('.hamburger').addEventListener('click', function() {
-  document.querySelector('.navbar').classList.toggle('active');
-});
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
