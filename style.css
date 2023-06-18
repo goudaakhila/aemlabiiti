@@ -179,18 +179,15 @@ position:absolute;
 width:auto;
 height:100px;
 }
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: right;
     padding: 1rem 1.5rem;
 }
-
 .hamburger {
     display: none;
 }
-
 .bar {
     display: block;
     width: 25px;
@@ -200,23 +197,16 @@ height:100px;
     transition: all 0.3s ease-in-out;
     background-color: #101010;
 }
-
 .nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: auto;
 }
-
 .nav-link {
     font-weight: 200;
     color: #475569;
 }
-
-.hamburger {
-    display: none;
-}
-
 nav ul {
     display: flex;
     justify-content: flex-end;
@@ -300,8 +290,6 @@ nav ul li a:hover:before {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
-
-
 
 /* footer styles */
 /* footer styles */
