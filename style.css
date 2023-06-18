@@ -276,6 +276,7 @@ nav ul li a:hover:before {
     .hamburger {
         display: block;
         cursor: pointer;
+	z-index: 9999;
     }
 
     .hamburger.active .bar:nth-child(2) {
