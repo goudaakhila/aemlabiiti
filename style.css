@@ -254,7 +254,7 @@ nav ul li a:hover:before {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 12rem;
+        top: 16rem;
         flex-direction: column;
         background-color: #fff;
         width: 100%;
